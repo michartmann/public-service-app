@@ -43,12 +43,15 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Forside</a></li>
-              <li><a href="#about">Anmeldelser</a></li>
-              <li><a href="#contact">Kort</a></li>
-			  <li><a href="#contact">Statistik</a></li>
-			  <li><a href="#contact">Kampagner</a></li>
-			  <li><a href="#contact">Søg</a></li>
+              <li><a href="#about"><i class="icon-pencil"></i> Anmeldelser</a></li>
+              <li><a href="#contact"><i class="icon-picture"></i> Kort</a></li>
+			  <li><a href="#contact"><i class="icon-bar-chart"></i> Statistik</a></li>
+			  <li><a href="#contact"><i class="icon-eye-open"></i> Kampagner</a></li>
             </ul>
+			<form class="navbar-search pull-left">
+				<i class="icon-search"></i>
+				<input type="text" class="search-query" placeholder="S&oslash;g">
+			</form>
 			<p class="navbar-text pull-right">Logged ind som <a href="#">username</a></p>
           </div><!--/.nav-collapse -->
         </div>
@@ -82,9 +85,7 @@
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
       </div>
-    <div style="font-size: 24px;">
-    <i class="icon-camera-retro"></i> icon-camera-retro
-    </div>
+
 	
       <hr>
 
@@ -119,7 +120,7 @@
 		map.on('locationfound', onLocationFound);
 		map.on('locationerror', onLocationError);
 
-		map.locateAndSetView();
+		//map.locateAndSetView();
 
 		function onLocationFound(e) {
 			var radius = e.accuracy / 2;
