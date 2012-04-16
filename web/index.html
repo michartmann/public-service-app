@@ -15,7 +15,7 @@
 
 	<link rel="stylesheet/less" href="less/style.less">
 	<script src="js/libs/less-1.3.0.min.js"></script>
-	<script src="js/libs/bootstrap/tooltip.js"></script>
+	
 	
 	<!-- Use SimpLESS (Win/Linux/Mac) or LESS.app (Mac) to compile your .less files
 	to style.css, and replace the 2 lines above by this one:
@@ -24,10 +24,8 @@
 	 -->
 
 	<script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
-	<link rel="stylesheet" href="http://code.leafletjs.com/leaflet-0.3.1/leaflet.css" />
-	<!--[if lte IE 8]>
-		<link rel="stylesheet" href="http://code.leafletjs.com/leaflet-0.3.1/leaflet.ie.css" />
-	<![endif]-->
+
+
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -60,30 +58,58 @@
     </div>
 
     <div class="container">
-	  <div id="map" style="height: 200px"></div>
+		<ul class="nav nav-tabs">
+			<li><a href="#home" data-toggle="tab">Home</a></li>
+			<li><a href="#profile" data-toggle="tab">Profile</a></li>
+			<li><a href="#messages" data-toggle="tab">Messages</a></li>
+			<li><a href="#settings" data-toggle="tab">Settings</a></li>
+		</ul> 
+		<div class="tab-content">
+			<div class="tab-pane active" id="home">
+				
+				The video emerged on the same day as Israel launched a security operation to prevent hundreds of pro-Palestinian activists entering the country en route to the West Bank, claiming they were provocateurs and were planning acts of violence. The assault on the Danish man and the operation to block the entry of Palestinian sympathisers have led to questions about whether Israel's response to activists is excessively heavy-handed and will damage its image.. 
+			</div>
+			<div class="tab-pane" id="profile">
+				...Klokken 21.33 kørte den første af bilerne med sørgende pårørende ud fra Mærsks hus i Charlottenlund.
+
+Umiddelbart efter fulgte de næste biler med medlemmer af Mc-Kinney-familien.
+
+De omkring fem biler trillede roligt - næsten som tyngede af sorg - ud af porten, hvor vagter dagen igennem har taget imod blomster og kondolence-breve. 
+			</div>
+			<div class="tab-pane" id="messages">
+				...messages
+			</div>
+			<div class="tab-pane" id="settings">
+				...settings
+			</div>
+		</div>
+		 
+		<script>
+		  $(function () {
+			$('.tabs a:last').tab('show')
+		  })
+		</script>
+
+	<div id="map" style="height: 200px"></div>
+  
+	  <div class="well">
+
+<a href="#" id="example" class="btn btn-success" rel="popover" data-content="It's so simple to create a tooltop for my website!" data-original-title="Twitter Bootstrap Popover">hover for popover</a>
+
+</div>
+	  
+
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>Hello, world!</h1>
 		    
-            <p class="muted" style="margin-bottom: 0;">Tight pants next level keffiyeh <a href="#" rel="tooltip" title="first tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" rel="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A <a href="#" rel="tooltip" title="Another one here too">really ironic</a> artisan whatever keytar, scenester farm-to-table banksy Austin <a href="#" rel="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
+            <p class="muted" style="margin-bottom: 0;">Tight pants next level keffiyeh <a href="#" rel="popover" title="first tooltip">you probably</a> haven't heard of them. Photo booth beard raw denim letterpress vegan messenger bag stumptown. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel <a href="#" rel="tooltip" title="Another tooltip">have a</a> terry richardson vinyl chambray. Beard stumptown, cardigans banh mi lomo thundercats. Tofu biodiesel williamsburg marfa, four loko mcsweeney's cleanse vegan chambray. A <a href="#" rel="tooltip" title="Another one here too">really ironic</a> artisan whatever keytar, scenester farm-to-table banksy Austin <a href="#" rel="tooltip" title="The last tip!">twitter handle</a> freegan cred raw denim single-origin coffee viral.
             
           </div>
         <p>This is a template for a <a rel="tooltip" href="#" data-original-title="first tooltip">you probably</a> simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       </div>
-	  <h2>Live demo</h2>
-<p>Toggle a modal via javascript by clicking the button below. It will slide down and fade in from the top of the page.</p>
-<div id="myModal" class="modal hide fade" style="display: none;">
-<div class="modal-header">
-<a class="close" data-dismiss="modal">×</a>
-<h3>Modal Heading</h3>
-</div>
-<div class="modal-body">
-<div class="modal-footer">
-<a class="btn" data-dismiss="modal" href="#">Close</a>
-<a class="btn btn-primary" href="#">Save changes</a>
-</div>
-</div>
+
 <a class="btn btn-primary btn-large" href="#myModal" data-toggle="modal">Launch demo modal</a>
 
       <!-- Example row of columns -->
@@ -103,9 +129,10 @@
           <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
           <p><a class="btn" href="#">View details &raquo;</a></p>
         </div>
+
       </div>
 
-	
+
       <hr>
 
       <footer>
@@ -113,21 +140,50 @@
       </footer>
 
     </div> <!-- /container -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+	    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
-<script src="js/libs/bootstrap/bootstrap.min.js"></script>
+	<script src="js/libs/bootstrap/bootstrap.min.js"></script>
 
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
-<script>
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-	g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-	s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
-<script src="http://code.leafletjs.com/leaflet-0.3.1/leaflet.js"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>
 	<script>
+		 // Google Analytics
+		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+	<script src="js/libs/jquery-1.7.2.min.js"></script>
+	<script src="js/libs/bootstrap/tooltip.js"></script>
+	<script src="js/libs/bootstrap/popover.js"></script>
+
+	<script>
+
+	$(function ()
+	{ 
+		$("#example").tooltip({
+				placement : 'top',
+			})
+			.click(function(e) {
+				e.preventDefault()
+			})
+	});
+
+	</script>
+	<link rel="stylesheet" href="http://code.leafletjs.com/leaflet-0.3.1/leaflet.css" />
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="http://code.leafletjs.com/leaflet-0.3.1/leaflet.ie.css" />
+	<![endif]-->
+
+</body>
+</html>
+<!--
+<script src="http://code.leafletjs.com/leaflet-0.3.1/leaflet.js"></script>
+	<script
 		var map = new L.Map('map');
 
 		var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
@@ -156,5 +212,5 @@
 			alert(e.message);
 		}
 	</script>
-</body>
-</html>
+-->
+
